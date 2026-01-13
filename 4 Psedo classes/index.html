@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive List with CSS Combinators</title>
+
+    <style>
+        /* 1️⃣ First list item bold */
+        ol li:first-child {
+            font-weight: bold;
+        }
+
+        /* 2️⃣ Adjacent sibling: item right after first */
+        ol li:first-child + li {
+            background-color: lightyellow;
+        }
+
+        /* 3️⃣ General sibling: all items after the third */
+        ol li:nth-child(3) ~ li {
+            font-style: italic;
+        }
+
+        /* 4️⃣ Hover effect */
+        ol li:hover {
+            color: darkred;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+    </ol>
+
+</body>
+</html>
