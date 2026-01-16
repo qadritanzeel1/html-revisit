@@ -1,11 +1,59 @@
+<!-- Create a Flexbox layout with a container holding four items. The layout should demonstrate the use of the flex-direction property.
+
+Requirements:
+
+Initially, arrange the items in a row.
+Change the layout to arrange the items in a column using flex-direction: column.
+Add comments in your CSS explaining how flex-direction affects the layout. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Direction Demo</title>
+
+  <style>
+    #container {
+      background-color: burlywood;
+      width: 100%;
+      height: 400px;
+      display: flex;
+
+      /* By default, flex-direction is ROW
+         Items are arranged horizontally (left → right) */
+      flex-direction: row;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Change flex-direction to column
+       Items will be stacked vertically (top → bottom) */
+    /*
+    #container {
+      flex-direction: column;
+    }
+    */
+
+    .item {
+      background-color: aqua;
+      width: 150px;
+      height: 80px;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <div id="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+  </div>
 </body>
 </html>
