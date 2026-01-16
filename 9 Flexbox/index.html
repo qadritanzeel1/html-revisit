@@ -1,0 +1,62 @@
+<!-- You are tasked with creating a simple webpage that demonstrates the core principles of Flexbox. Using a container and three items, arrange the items horizontally and align them to the center of the container (both horizontally and vertically).
+
+Requirements:
+
+Use display: flex on the container to enable Flexbox.
+Center the items horizontally using justify-content.
+Center the items vertically using align-items. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        #container{
+            margin: 10px;
+            padding: 10px;
+            background-color: aqua;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .item1{
+            background-color: rgb(14, 154, 84);
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+        .item2{
+            text-align: center;
+            background-color: rgb(113, 15, 58);
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 5px;
+        }
+        .item3{
+            background-color: blue;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       <div class="item1">item-1</div>
+       <div class="item2">item-2</div>
+       <div class="item3">item-3</div>
+    </div>
+</body>
+</html>
