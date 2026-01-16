@@ -1,0 +1,56 @@
+<!-- Create four elements with unique IDs or classes (block-element, inline-element, inline-block-element, hidden-element).
+Style each element to display its respective property:
+block: Full-width, with a distinct border.
+inline: Inline text or an icon, styled with a colored background.
+inline-block: A small box with set dimensions and spacing.
+none: Should be invisible but toggleable via a button (JavaScript is optional for this step).
+Add a simple paragraph or text to observe the behavior of each display type.
+Expected Output: A webpage showing the differences between block, inline, and inline-block. Optionally toggle the visibility of the none element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+    <style>
+        #block{
+            background-color: brown;
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 2px dashed rgb(28, 206, 176);
+        }
+        #inline{
+            background-color: rgb(102, 31, 225);
+            padding: 10px;
+            display: inline;
+            margin: 10px;
+            width: 200px;
+            border: 2px solid yellow;
+            /* border: 2px solid yellow; */
+        }
+        #inline-block{
+            background-color: brown;
+            padding: 10px;
+            display: inline-block;
+            border: 2px dashed rgb(32, 110, 135);
+            margin: 10px;
+        }
+        #none{
+            background-color: rgb(229, 19, 89);
+            padding: 10px;
+            display: none;
+            border: 2px dashed rgb(139, 14, 28);
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <span id="block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores iusto, adipisci molestiae aspernatur neque quasi laborum maiores. Debitis, magni repellendus.</span>
+    <span id="inline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, a.</span>
+    <span id="inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aperiam suscipit repudiandae, quos explicabo saepe.</span>
+    <span id="none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolor?</span>
+</body>
+</html>
