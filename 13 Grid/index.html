@@ -1,0 +1,65 @@
+<!-- You are tasked with creating a grid container that displays six items arranged in a 3x2 grid (three columns and two rows). Use the grid-template-columns and grid-template-rows properties to define the layout. Each grid item should have a unique background color and some padding to differentiate them visually.
+
+Instructions:
+Define a div with a class of container as the grid container.
+Add six child divs as grid items.
+Style the container to form a 3x2 grid.
+Ensure each grid item has a visible border, unique background color, and text inside to identify them (e.g., "Item 1", "Item 2"). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+            gap:2px;
+
+        }
+        .container>div{
+            /* border: 2px solid black; */
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+            
+        }
+
+ .container > div:nth-child(1){ background: #ffadad; }
+.container > div:nth-child(2){ background: #ffd6a5; }
+.container > div:nth-child(3){ background: #fdffb6; }
+.container > div:nth-child(4){ background: #caffbf; }
+.container > div:nth-child(5){ background: #9bf6ff; }
+.container > div:nth-child(6){ background: #bdb2ff; }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div >Item 1</div>
+        <div >Item 2</div>
+        <div >Item 3</div>
+        <div >Item 4</div>
+        <div >Item 5</div>
+        <div >Item 6</div>
+    </div>
+</body>
+</html>
