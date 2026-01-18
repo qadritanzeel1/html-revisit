@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Periodic Table</title>
+    <style>
+
+  
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(18, 52px);
+    grid-auto-rows: 52px;
+    gap: 8px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+.element {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(145deg, #2a2f3a, #1e222c);
+    color: #e6e6e6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 11px;
+    letter-spacing: 0.3px;
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.element p:first-child {
+    font-size: 9px;
+    opacity: 0.7;
+}
+
+
+.element p:last-child {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.element p {
+    margin: 0;
+}
+
+
+.element:hover {
+    transform: translateY(-6px) scale(1.08);
+    background: linear-gradient(145deg, #3a4152, #2b3040);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.75),
+        0 0 18px rgba(120, 160, 255, 0.35);
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+.element[style*="grid-column: 1"] {
+    background: linear-gradient(145deg, #4b1d1d, #2b0f0f);
+    box-shadow:
+        0 0 18px rgba(255, 80, 80, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+.element[style*="grid-column: 18"] {
+    background: linear-gradient(145deg, #1d3b4b, #0f2430);
+    box-shadow:
+        0 0 18px rgba(80, 200, 255, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="element" style="grid-column: 1;">
+            <p>1</p>
+            <p>H</p>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <p>2</p>
+            <p>He</p>
+        </div>
+        <div class="element" style="grid-column: 1;">
+            <p>3</p>
+            <p>Li</p>
+        </div>
+
+        <div class="element" style="grid-column: 2;">
+            <p>4</p>
+            <p>Be</p>
+        </div>
+        <div class="element" style="grid-column: 13;">
+            <p>5</p>
+            <p>B</p>
+        </div>
+        <div class="element" style="grid-column: 14;">
+            <p>6</p>
+            <p>C</p>
+        </div>
+        <div class="element" style="grid-column: 15;">
+            <p>7</p>
+            <p>N</p>
+        </div>
+        <div class="element" style="grid-column: 16;">
+            <p>8</p>
+            <p>O</p>
+        </div>
+        <div class="element" style="grid-column: 17;">
+            <p>9</p>
+            <p>F</p>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <p>10</p>
+            <p>Ne</p>
+        </div>
+        <div class="element" style="grid-column: 1;">
+            <p>11</p>
+            <p>Na</p>
+        </div>
+        <div class="element" style="grid-column: 2;">
+            <p>4</p>
+            <p>Be</p>
+        </div>
+        <div class="element" style="grid-column: 13;">
+            <p>5</p>
+            <p>B</p>
+        </div>
+        <div class="element" style="grid-column: 14;">
+            <p>14</p>
+            <p>Si</p>
+        </div>
+        <div class="element" style="grid-column: 15;">
+            <p>15</p>
+            <p>P</p>
+        </div>
+        <div class="element" style="grid-column: 16;">
+            <p>16</p>
+            <p>S</p>
+        </div>
+        <div class="element" style="grid-column: 17;">
+            <p>17</p>
+            <p>Cl</p>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <p>18</p>
+            <p>Ar</p>
+        </div>
+        <div class="element" style="grid-column: 1;">
+            <p>19</p>
+            <p>K</p>
+        </div>
+        <div class="element" style="grid-column: 2;">
+            <p>10</p>
+            <p>Ca</p>
+        </div>
+        <div class="element" style="grid-column: 3;">
+            <p>21</p>
+            <p>Sc</p>
+        </div>
+        <div class="element" style="grid-column: 4;">
+            <p>22</p>
+            <p>Ti</p>
+        </div>
+        <div class="element" style="grid-column: 5;">
+            <p>23</p>
+            <p>V</p>
+        </div>
+        <div class="element" style="grid-column: 6;">
+            <p>24</p>
+            <p>Cr</p>
+        </div>
+        <div class="element" style="grid-column: 7;">
+            <p>25</p>
+            <p>Mn</p>
+        </div>
+        <div class="element" style="grid-column: 8;">
+            <p>26</p>
+            <p>Fe</p>
+        </div>
+        <div class="element" style="grid-column: 9;">
+            <p>27</p>
+            <p>Co</p>
+        </div>
+        <div class="element" style="grid-column: 10;">
+            <p>28</p>
+            <p>Ni</p>
+        </div>
+        <div class="element" style="grid-column: 11;">
+            <p>29</p>
+            <p>Cu</p>
+        </div>
+        <div class="element" style="grid-column: 12;">
+            <p>30</p>
+            <p>Zn</p>
+        </div>
+        <div class="element" style="grid-column: 13;">
+            <p>31</p>
+            <p>Ga</p>
+        </div>
+        <div class="element" style="grid-column: 14;">
+            <p>32</p>
+            <p>Ge</p>
+        </div>
+        <div class="element" style="grid-column: 15;">
+            <p>33</p>
+            <p>As</p>
+        </div>
+        <div class="element" style="grid-column: 16;">
+            <p>34</p>
+            <p>Se</p>
+        </div>
+        <div class="element" style="grid-column: 17;">
+            <p>35</p>
+            <p>Br</p>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <p>36</p>
+            <p>Kr</p>
+        </div>
+      <!-- Period 5 -->
+<div class="element" style="grid-column: 1;">
+  <p>37</p><p>Rb</p>
+</div>
+<div class="element" style="grid-column: 2;">
+  <p>38</p><p>Sr</p>
+</div>
+<div class="element" style="grid-column: 3;">
+  <p>39</p><p>Y</p>
+</div>
+<div class="element" style="grid-column: 4;">
+  <p>40</p><p>Zr</p>
+</div>
+<div class="element" style="grid-column: 5;">
+  <p>41</p><p>Nb</p>
+</div>
+<div class="element" style="grid-column: 6;">
+  <p>42</p><p>Mo</p>
+</div>
+<div class="element" style="grid-column: 7;">
+  <p>43</p><p>Tc</p>
+</div>
+<div class="element" style="grid-column: 8;">
+  <p>44</p><p>Ru</p>
+</div>
+<div class="element" style="grid-column: 9;">
+  <p>45</p><p>Rh</p>
+</div>
+<div class="element" style="grid-column: 10;">
+  <p>46</p><p>Pd</p>
+</div>
+<div class="element" style="grid-column: 11;">
+  <p>47</p><p>Ag</p>
+</div>
+<div class="element" style="grid-column: 12;">
+  <p>48</p><p>Cd</p>
+</div>
+<div class="element" style="grid-column: 13;">
+  <p>49</p><p>In</p>
+</div>
+<div class="element" style="grid-column: 14;">
+  <p>50</p><p>Sn</p>
+</div>
+<div class="element" style="grid-column: 15;">
+  <p>51</p><p>Sb</p>
+</div>
+<div class="element" style="grid-column: 16;">
+  <p>52</p><p>Te</p>
+</div>
+<div class="element" style="grid-column: 17;">
+  <p>53</p><p>I</p>
+</div>
+<div class="element" style="grid-column: 18;">
+  <p>54</p><p>Xe</p>
+</div>
+<!-- Period 6 -->
+<div class="element" style="grid-column: 1;">
+  <p>55</p><p>Cs</p>
+</div>
+<div class="element" style="grid-column: 2;">
+  <p>56</p><p>Ba</p>
+</div>
+
+<!-- Lanthanides are skipped here visually -->
+
+<div class="element" style="grid-column: 3;">
+  <p>71</p><p>Lu</p>
+</div>
+<div class="element" style="grid-column: 4;">
+  <p>72</p><p>Hf</p>
+</div>
+<div class="element" style="grid-column: 5;">
+  <p>73</p><p>Ta</p>
+</div>
+<div class="element" style="grid-column: 6;">
+  <p>74</p><p>W</p>
+</div>
+<div class="element" style="grid-column: 7;">
+  <p>75</p><p>Re</p>
+</div>
+<div class="element" style="grid-column: 8;">
+  <p>76</p><p>Os</p>
+</div>
+<div class="element" style="grid-column: 9;">
+  <p>77</p><p>Ir</p>
+</div>
+<div class="element" style="grid-column: 10;">
+  <p>78</p><p>Pt</p>
+</div>
+<div class="element" style="grid-column: 11;">
+  <p>79</p><p>Au</p>
+</div>
+<div class="element" style="grid-column: 12;">
+  <p>80</p><p>Hg</p>
+</div>
+<div class="element" style="grid-column: 13;">
+  <p>81</p><p>TL</p>
+</div>
+<div class="element" style="grid-column: 14;">
+  <p>82</p><p>Pb</p>
+</div>
+<div class="element" style="grid-column: 15;">
+  <p>83</p><p>Bi</p>
+</div>
+<div class="element" style="grid-column: 16;">
+  <p>84</p><p>Po</p>
+</div>
+<div class="element" style="grid-column: 17;">
+  <p>85</p><p>At</p>
+</div>
+<div class="element" style="grid-column: 18;">
+  <p>86</p><p>Rn</p>
+</div>
+<!-- Period 7 -->
+<div class="element" style="grid-column: 1;">
+  <p>87</p><p>Fr</p>
+</div>
+<div class="element" style="grid-column: 2;">
+  <p>88</p><p>Ra</p>
+</div>
+
+<!-- Actinides are skipped here visually -->
+
+<div class="element" style="grid-column: 3;">
+  <p>103</p><p>Lr</p>
+</div>
+<div class="element" style="grid-column: 4;">
+  <p>104</p><p>Rf</p>
+</div>
+<div class="element" style="grid-column: 5;">
+  <p>105</p><p>Db</p>
+</div>
+<div class="element" style="grid-column: 6;">
+  <p>106</p><p>Sg</p>
+</div>
+<div class="element" style="grid-column: 7;">
+  <p>107</p><p>Bh</p>
+</div>
+<div class="element" style="grid-column: 8;">
+  <p>108</p><p>Hs</p>
+</div>
+<div class="element" style="grid-column: 9;">
+  <p>109</p><p>Mt</p>
+</div>
+<div class="element" style="grid-column: 10;">
+  <p>110</p><p>DS</p>
+</div>
+<div class="element" style="grid-column: 11;">
+  <p>111</p><p>Rg</p>
+</div>
+<div class="element" style="grid-column: 12;">
+  <p>112</p>Cn<p>
+    </div>
+<div class="element" style="grid-column: 13;">
+  <p>113</p>Nh<p>
+    </div>
+<div class="element" style="grid-column: 14;">
+  <p>114</p>F1<p>
+    </div>
+<div class="element" style="grid-column: 15;">
+  <p>115</p>Mc<p>
+    </div>
+<div class="element" style="grid-column: 16;">
+  <p>116</p>Lv<p>
+    </div>
+<div class="element" style="grid-column: 17;">
+  <p>117</p>Ts<p>
+    </div>
+<div class="element" style="grid-column: 18;">
+  <p>118</p>Og<p>
+    </div>
+<div class="element" style="grid-column: 3;">
+  <p>57</p>La<p>
+    </div>
+<div class="element" style="grid-column: 4;">
+  <p>58</p>Ce<p>
+    </div>
+<div class="element" style="grid-column: 5;">
+  <p>59</p>Pr<p>
+    </div>
+<div class="element" style="grid-column: 6;">
+  <p>60</p>Nd<p>
+    </div>
+<div class="element" style="grid-column: 7;">
+  <p>61</p>Pm<p>
+    </div>
+<div class="element" style="grid-column: 8;">
+  <p>62</p>Sm<p>
+    </div>
+<div class="element" style="grid-column: 9;">
+  <p>63</p>Eu<p>
+    </div>
+<div class="element" style="grid-column: 10;">
+  <p>64</p>Gd<p>
+    </div>
+<div class="element" style="grid-column: 11;">
+  <p>65</p>Tb<p>
+    </div>
+<div class="element" style="grid-column: 12;">
+  <p>66</p>Dy<p>
+    </div>
+<div class="element" style="grid-column: 13;">
+  <p>67</p>Ho<p>
+    </div>
+<div class="element" style="grid-column: 14;">
+  <p>68</p>Er<p>
+    </div>
+<div class="element" style="grid-column: 15;">
+  <p>69</p>Tm<p>
+    </div>
+<div class="element" style="grid-column: 16;">
+  <p>70</p>Yb<p>
+    </div>
+<div class="element" style="grid-column: 3;">
+  <p>89</p>Ac<p>
+    </div>
+<div class="element" style="grid-column: 4;">
+  <p>90</p>Th<p>
+    </div>
+<div class="element" style="grid-column: 5;">
+  <p>91</p>Pa<p>
+    </div>
+<div class="element" style="grid-column: 6;">
+  <p>92</p>U<p>
+    </div>
+<div class="element" style="grid-column: 7;">
+  <p>93</p>Np<p>
+    </div>
+<div class="element" style="grid-column: 8;">
+  <p>94</p>Pu<p>
+    </div>
+<div class="element" style="grid-column: 9;">
+  <p>95</p>Am<p>
+    </div>
+<div class="element" style="grid-column: 10;">
+  <p>96</p>Cm<p>
+    </div>
+<div class="element" style="grid-column: 11;">
+  <p>97</p>Bk<p>
+    </div>
+<div class="element" style="grid-column: 12;">
+  <p>98</p>Cf<p>
+    </div>
+<div class="element" style="grid-column: 13;">
+  <p>99</p>Es<p>
+    </div>
+<div class="element" style="grid-column: 14;">
+  <p>100</p>Fm<p>
+    </div>
+<div class="element" style="grid-column: 15;">
+  <p>101</p>Md<p>
+    </div>
+<div class="element" style="grid-column: 16;">
+  <p>102</p>No<p>
+    </div>
+</body>
+
+</html>
