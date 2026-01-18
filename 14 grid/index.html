@@ -1,0 +1,40 @@
+<!-- Create a grid container with four grid items arranged in a 2x2 grid. Use the place-items property to center the grid items horizontally and vertically within their respective cells.
+
+Instructions:
+Define a div with a class of container as the grid container.
+Add four child divs as grid items.
+Style the container to form a 2x2 grid.
+Use the place-items property to center all items inside their cells. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <style>
+        .container{
+             display: grid;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(2, 200px);
+            place-items: center;   /* ✅ correct place */
+            gap: 10px;
+        }
+        .container > div:nth-child(1){ background: #ffadad; }
+.container > div:nth-child(2){ background: #ffd6a5; }
+.container > div:nth-child(3){ background: #fdffb6; }
+.container > div:nth-child(4){ background: #caffbf; }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+</body>
+</html>
