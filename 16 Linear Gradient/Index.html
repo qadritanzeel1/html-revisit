@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+
+        .container{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,160px);
+            gap: 10px;
+            grid-template-areas: 
+            "b1 b2 b3"
+            "b4 b5 b6"
+            "b7 b7 b7"
+            ;
+        }
+
+        .b1 {
+  grid-area: b1;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+.b2 {
+  grid-area: b2;
+  background: linear-gradient(to right, #6a85b6, #bac8e0);
+}
+
+.b3 {
+  grid-area: b3;
+  background: linear-gradient(to right, #7fdbda, #a8ffce);
+}
+
+.b4 {
+  grid-area: b4;
+  background: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+.b5 {
+  grid-area: b5;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+.b6 {
+  grid-area: b6;
+  background: linear-gradient(to right, #6a85b6, #bac8e0);
+}
+
+.b7 {
+  grid-area: b7;
+  background: linear-gradient(to right, #7fdbda, #a8ffce);
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+        <div class="box b4"></div>
+        <div class="box b5"></div>
+        <div class="box b6"></div>
+        <div class="box b7"></div>
+    </div>
+</body>
+
+</html>
