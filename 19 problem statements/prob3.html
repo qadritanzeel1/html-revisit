@@ -1,0 +1,97 @@
+<!-- Design a responsive navbar that adapts to screen size using Flexbox and media queries:
+
+On large screens (min-width: 1024px), the navbar items should be displayed horizontally in a single row.
+On medium screens (768px to 1023px), the navbar should be stacked vertically with each item centered.
+On small screens (less than 768px), the navbar should collapse into a hamburger menu that opens when clicked.
+The hamburger menu can use simple text or an icon to represent the collapsed state. Focus on layout and responsiveness. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive navbar</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    /* ===== Base (Mobile First) ===== */
+    header {
+      padding: 15px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+    }
+
+    i {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+      display: block; /* ✅ mobile only */
+      cursor: pointer;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      padding: 20px 0 0;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: burlywood;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    /* ===== Medium screens (768px – 1023px) ===== */
+    @media (min-width: 768px) {
+      i {
+        display: none; /* ✅ hamburger hide */
+      }
+
+      ul {
+        display: flex;
+      }
+    }
+
+    /* ===== Large screens (≥1024px) ===== */
+    @media (min-width: 1024px) {
+      ul {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <i class="fa fa-bars"></i>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Simple toggle for mobile ===== -->
+  <script>
+    const icon = document.querySelector("i");
+    const menu = document.getElementById("menu");
+
+    icon.addEventListener("click", () => {
+      menu.style.display =
+        menu.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+</body>
+</html>
