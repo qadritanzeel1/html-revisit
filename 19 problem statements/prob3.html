@@ -18,7 +18,7 @@ The hamburger menu can use simple text or an icon to represent the collapsed sta
   />
 
   <style>
-    /* ===== Base (Mobile First) ===== */
+    
     header {
       padding: 15px;
       background: linear-gradient(90deg, #6a11cb, #2575fc);
@@ -28,7 +28,7 @@ The hamburger menu can use simple text or an icon to represent the collapsed sta
       padding: 10px;
       border-radius: 10px;
       background-color: white;
-      display: block; /* ✅ mobile only */
+      display: block; 
       cursor: pointer;
     }
 
@@ -50,10 +50,10 @@ The hamburger menu can use simple text or an icon to represent the collapsed sta
       border-radius: 10px;
     }
 
-    /* ===== Medium screens (768px – 1023px) ===== */
+    
     @media (min-width: 768px) {
       i {
-        display: none; /* ✅ hamburger hide */
+        display: none; 
       }
 
       ul {
@@ -61,7 +61,7 @@ The hamburger menu can use simple text or an icon to represent the collapsed sta
       }
     }
 
-    /* ===== Large screens (≥1024px) ===== */
+    
     @media (min-width: 1024px) {
       ul {
         flex-direction: row;
@@ -83,7 +83,7 @@ The hamburger menu can use simple text or an icon to represent the collapsed sta
     </nav>
   </header>
 
-  <!-- ===== Simple toggle for mobile ===== -->
+  
   <script>
     const icon = document.querySelector("i");
     const menu = document.getElementById("menu");
