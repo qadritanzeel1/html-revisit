@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #121321;
+    color: #ffff;
+}
+
+section::before{
+    content: "";
+    position:absolute;
+    height: 240px;
+    width: 240px;
+    transform: translate(-150px,-100px);
+    border-radius: 100%;
+    background: linear-gradient(90deg,#9c27b0,#f3f5f5);
+}
+
+section::after{
+    content: "";
+    position:absolute;
+    height: 240px;
+    width: 240px;
+    transform: translate(150px,100px);
+    border-radius: 100%;
+    background: linear-gradient(90deg,#9c27b0,#f3f5f5);
+}
+
+.container{
+    position: relative;
+    height: 225px;
+    width: 375px;
+    z-index: 100;
+}
+
+.container .card{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.front-face .logo img{
+width: 48px;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+
+.logo{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.master{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
+}
+
+.chip{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+h5{
+    margin-right: 150px;
+}
+
+.number,pre{
+    padding-left: 20px;
+    
+}
+
+.number{
+    font-size: small;
+    line-height: 1.2;
+}
+pre{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.Valid{
+    font-size: 8px;
+}
