@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(75, 75, 218);
+    padding: 50px;
+}
+
+nav>a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+}
